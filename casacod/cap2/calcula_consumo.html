@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lógica de Progamação: Cap. 2</title>
+</head>
+<body>
+    <h3>Álcool ou Gasolina?</h3>
+
+    <script>
+        var tanqueCheio         = 40;      // l
+        var caminhoGasolina     = 480;     // Km
+        var caminhoAlcool       = 300;     // Km
+        var precoGasolina       = 2.90;    // R$
+        var precoAlcool         = 2.40;    // R$
+
+        // Cálculo
+        var consumoGasolina     = Math.round(caminhoGasolina / tanqueCheio);
+        var precoPorKmGasolina  = precoGasolina / consumoGasolina;
+
+        var consumoAlcool       = Math.round(caminhoAlcool / tanqueCheio);
+        var precoPorKmAlcool    = precoAlcool / consumoAlcool;
+
+        // Resultados
+        document.write("O consumo de gasolina é de " + Math.round(consumoGasolina) + " litros por Km.<br>");
+        document.write("O consumo de álcool é de " + Math.round(consumoAlcool) + " litros por Km.<br>");
+
+        // Preço por Km
+        document.write("O preço da gasolina por km é: " + precoPorKmGasolina.toFixed(2) + "<br>");
+        document.write("O preço do álcool por km é: " + precoPorKmAlcool.toFixed(2));
+    </script>
+</body>
+</html>
