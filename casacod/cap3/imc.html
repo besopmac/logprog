@@ -20,13 +20,20 @@
             return imc;
         }
 
-        var peso     = 95;
-        var altura   = 1.83;
-        var imc      = Math.round(calculaIMC(altura, peso));
+        var nomeUsuario     = prompt("Bom dia! Qual é o seu nome?");
+        var alturaUsuario   = prompt(nomeUsuario + " qual é sua altura?");
+        var pesoUsuario     = prompt("E o seu peso?");
 
-        mostra("Meu IMC é " + imc);
-        mostra("Ainda estou " + (imc - 18.5) + " pontos acima do limite da magreza.");
-        mostra("Porém, estou " + (imc - 35) + " pontos distante da obesidade severa.");
+        var imcUsuario = calculaIMC(alturaUsuario, pesoUsuario);
+        mostra(nomeUsuario +", o seu IMC é " + imcUsuario);
+
+        // var peso     = 95;
+        // var altura   = 1.83;
+        // var imc      = Math.round(calculaIMC(altura, peso));
+        //
+        // mostra("Meu IMC é " + imc);
+        // mostra("Ainda estou " + (imc - 18.5) + " pontos acima do limite da magreza.");
+        // mostra("Porém, estou " + (imc - 35) + " pontos distante da obesidade severa.");
     </script>
 </body>
 </html>
