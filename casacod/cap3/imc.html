@@ -27,6 +27,19 @@
         var imcUsuario = calculaIMC(alturaUsuario, pesoUsuario);
         mostra(nomeUsuario +", o seu IMC é " + imcUsuario);
 
+        if (imcUsuario < 18.5) {
+            mostra("Tá mais magro que um calango, hein?!");
+        }
+
+        if (imcUsuario > 35) {
+            mostra("Para de comer pão com toucinho, féladagaita!")
+        }
+
+        if (imcUsuario >= 18.5 && imcUsuario <= 35) {
+            mostra("Ok! Agora vá treinar para atingir o nível BIRRRL de Monstruosidade!");
+        }
+
+
         // var peso     = 95;
         // var altura   = 1.83;
         // var imc      = Math.round(calculaIMC(altura, peso));

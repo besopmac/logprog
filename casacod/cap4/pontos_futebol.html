@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Lógica de Progamação: Cap. 4</title>
+    </head>
+    <body>
+
+        <script>
+            function pulaLinha() {
+                document.write("<br>");
+            }
+            function mostra(frase){
+                document.write(frase);
+                pulaLinha();
+            }
+
+            var vitorias       = parseInt(prompt("Quantos jogos o Flamengo venceu?"));
+            var vitoriasVilao  = parseInt(prompt("Quantos jogos o Palmeiras venceu?"));
+
+            var empates        = parseInt(prompt("Quantos jogos o Flamengo empatou?"));
+            var empatesVilao   = parseInt(prompt("Quantos jogos o Palmeiras empatou?"));
+
+            var derrotas        = parseInt(prompt("Quantos jogos o Flamengo perdeu?"));
+            var derrotasVilao   = parseInt(prompt("Quantos jogos o Palmeiras perdeu?"));
+
+            function calculaPontos (vitorias, empates, derrotas) {
+                return (vitorias * 3) + empates - derrotas;
+            }
+
+            // var pontos         = (vitorias * 3) + empates;
+            // var pontosVilao    = (vitorias * 3) + empates;
+
+            if (calculaPontos(vitorias, empates, derrotas) > calculaPontos(vitoriasVilao, empatesVilao, derrotasVilao)) {
+                mostra("Cheirinho de Hepta!");
+                console.log("Flamengo teve " + vitorias + " vitórias, contra " + vitoriasVilao + " do Palmeiras");
+                console.log("Flamengo teve " + empates + " empates, contra " + empatesVilao + " do Palmeiras");
+                console.log("Flamengo perdeu " + derrotas + " vezes, contra" + derrotasVilao + " do Palmeiras");
+            }
+
+            if (calculaPontos(vitorias, empates, derrotas) < calculaPontos(vitoriasVilao, empatesVilao, derrotasVilao)) {
+                mostra("Cheirinho de Bacon!");
+                console.log("Palmeiras teve " + vitoriasVilao + " vitórias, contra " + vitorias + " do Flamengo");
+                console.log("Palmeiras teve " + empatesVilao + " empates, contra " + empates + " do Flamengo");
+                console.log("Palmeiras perdeu " + derrotasVilao + " vezes, contra " + derrotas + " do Flamengo");
+            }
+
+            if (calculaPontos(vitorias, empates, derrotas) == calculaPontos(vitoriasVilao, empatesVilao, derrotasVilao)) {
+                mostra("Me chama de contínuo!");
+                console.log("Contínuo!");
+            }
+        </script>
+
+    </body>
+</html>
