@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lógica de Progamação: Cap. 7</title>
+</head>
+<body>
+    <canvas id="tela" width="600" height="400"></canvas>
+
+    <script>
+        var tela  = document.getElementById("tela");
+        var c     = tela.getContext("2d");
+
+        c.fillStyle = "#E05206";
+        c.fillRect(0,0,600,135);
+
+        c.fillStyle = "white";
+        c.fillRect(0,135,600,130);
+
+        c.fillStyle = "#0DB02B";
+        c.fillRect(0,265,600,135);
+
+        c.fillStyle = "#E05206";
+        c.beginPath();
+        c.arc(300,200,50,0,2*Math.PI);
+        c.fill();
+    </script>
+</body>
+</html>
