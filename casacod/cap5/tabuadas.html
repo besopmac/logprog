@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Lógica de Progamação: Cap. 5</title>
+    </head>
+    <body>
+
+        <script>
+            function mostra(frase) {
+                document.write(frase + "<br>");
+            }
+
+            var multiplo        = prompt("Qual tabuada você quer saber?");
+            var multiplicador   = 1;
+
+            while(multiplicador <= 10) {
+                mostra(multiplo + " vezes " + multiplicador + " é igual a " + multiplo * multiplicador);
+                multiplicador++;
+            }
+        </script>
+    </body>
+</html>

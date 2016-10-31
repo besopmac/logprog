@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Lógica de Progamação: Cap. 5</title>
+    </head>
+    <body>
+
+        <script>
+            function mostra(frase) {
+                document.write(frase + "<br>");
+            }
+
+            //var anoComoTexto    = prompt("Qual é o ano inicial?");
+            var anoDeCopa       = parseInt(prompt("Qual é o ano inicial?"));
+            var anoLimite       = prompt("Qual é o ano limite?");
+
+            while(anoDeCopa <= anoLimite) {
+                mostra(anoDeCopa + " tem Copa!");
+                anoDeCopa = 4 + anoDeCopa;
+            }
+
+            mostra("<h3>7x1 foi pouco!</h3>");
+        </script>
+    </body>
+</html>
