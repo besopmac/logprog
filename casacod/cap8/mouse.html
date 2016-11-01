@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Lógica de Progamação: Cap. 8</title>
+    </head>
+    <body>
+        <canvas id="tela" width="600" height="400"></canvas>
+
+        <script>
+            var tela = document.getElementById("tela");
+            var c    = tela.getContext("2d");
+
+            c.fillStyle = "rgba(0,0,0,.1)";
+            c.fillRect(0, 0, 600, 400);
+
+            tela.onclick = function clicouNoCanvas(evento) {
+                var x = evento.pageX - tela.offsetLeft;
+                var y = evento.pageY - tela.offsetTop;
+
+                c.fillStyle = "red";
+                c.beginPath();
+                c.arc(x, y, 10, 0, 3*Math.PI);
+                c.fill();
+
+                console.log("Posição do clique: " + x + "," + y);
+            }
+        </script>
+    </body>
+</html>
