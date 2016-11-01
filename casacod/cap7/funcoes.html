@@ -17,18 +17,22 @@
             return 0.01 * x * x;
         }
 
-        function desenhaParabola() {
+        function funcaoSeno(x) {
+            return Math.sin(x/20) * 100 + 200;
+        }
+
+        function desenhaFuncao(funcaoMatematica) {
             for(var x = 0; x < 600; x = x+1) {
-                var y = funcaoQuadratica(x);
+                var y = funcaoMatematica(x);
                 console.log("Para x = " + x + ", o y vale " + y);
 
                 c.beginPath();
-                c.arc(x, 400-y, 2, 0, 2 * Math.PI);
+                c.arc(x, 400-y, 3, 0, 2 * Math.PI);
                 c.fill();
             }
         }
 
-        desenhaParabola();
+        desenhaFuncao(funcaoSeno);
     </script>
 </body>
 </html>
