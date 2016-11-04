@@ -1,5 +1,6 @@
 body {
     font: 16px "Comic Sans MS", cursive;
+    background: url("blue-rule.png");
 }
 
 strong {
@@ -16,6 +17,9 @@ strong {
     font-style: italic;
 }
 
+p:before {
+    content: " " url("yellow-pin.png");
+}
 
 
 a.homepage:link,
