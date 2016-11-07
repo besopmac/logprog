@@ -1,0 +1,10 @@
+/* challenge */
+@import url("style4_print.css") print;
+
+
+/*** print sample ***/
+/* defaults for screen */
+#print-head,
+#print-foot {
+    display: none;
+}

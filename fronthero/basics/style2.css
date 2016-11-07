@@ -1,0 +1,38 @@
+body {
+    font-family: sans-serif;
+    counter-reset: headnum;
+    /* 'headnum' é um label para esse contador, pode ser usado qualquer outra palavra */
+}
+ul, #numbered {
+    border: 1em solid #6699BB;
+    padding-right: 1em;
+    float: left;
+}
+li {
+    list-style: lower-roman;
+    margin-bottom: 8px;
+}
+
+/* numbered paragraphs */
+div#numbered {
+    counter-reset: mynum;
+}
+h3 {
+    border-top: 1px solid gray;
+    clear: left;
+}
+h3:before {
+    content: "(" counter(headnum, upper-latin) ") ";
+    counter-increment: headnum;
+}
+p:before {
+    content: counter(mynum) ": ";
+    counter-increment: mynum;
+    font-weight: bold;
+}
+
+#fixed-pin  {
+    position:fixed;
+    top: 3px;
+    right: 3px;
+}
